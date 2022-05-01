@@ -1,23 +1,41 @@
-.Body {
+.TableBody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 38px;
+}
+
+.TableBody> div {
     display: flex;
 }
 
 .idColumn,
 .headerColumn,
 .descriptionColumn {
+    display: flex;
+    text-align: left;
+    align-items: center;
     border: 1px solid #E3E6EC;
+    border-top: none;
     height: auto;
+    padding: 14px 11px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #474955;
 }
 
 .idColumn {
     border-right: none;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
 }
 
 .headerColumn {
-    border-left: none;
     border-right: none;
+    width: 50%;
 }
 
 .descriptionColumn {
-    border-left: none;
+    width: 40%;
 }

@@ -1,11 +1,20 @@
-import React, {useRef, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {NavLink} from 'react-router-dom'
-import classes from './Pages.module.css'
+import classes from './NavPages.module.css'
+import axios from "axios";
 
-const Pages = props => {
+const NavPages = props => {
+
 
     const getList = () => {
-        return props.pageList.map((pageNumber, index) => {
+
+
+        const totalPage = []
+        for (let i = props.startPageCount; i <= Math.ceil(props.totalPosts.length / 10); i++) {
+                totalPage.push(i)
+        }
+
+        return totalPage.map((pageNumber, index) => {
             return (
                 <li
                     className={classes.Li}
@@ -14,9 +23,11 @@ const Pages = props => {
                     <NavLink
                         to={`/page_${pageNumber}`}
                         style={({isActive}) => {
-                           return {color: isActive
-                                   ? '#7EBC3C'
-                                   : '#474955'}
+                            return {
+                                color: isActive
+                                    ? '#7EBC3C'
+                                    : '#474955'
+                            }
                         }}
                     >
                         {pageNumber}
@@ -34,4 +45,4 @@ const Pages = props => {
     )
 }
 
-export default Pages
+export default NavPages

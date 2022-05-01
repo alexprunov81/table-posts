@@ -1,0 +1,27 @@
+.TableFooter {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 75px;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ListItems ul {
+    display: flex;
+    justify-content: space-around;
+    width: 105px;
+    color: #474955;
+    list-style: none;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.ListItems ul li{
+    cursor: pointer;
+    margin-right: 20px;
+}
