@@ -1,0 +1,23 @@
+.Body {
+    display: flex;
+}
+
+.idColumn,
+.headerColumn,
+.descriptionColumn {
+    border: 1px solid #E3E6EC;
+    height: auto;
+}
+
+.idColumn {
+    border-right: none;
+}
+
+.headerColumn {
+    border-left: none;
+    border-right: none;
+}
+
+.descriptionColumn {
+    border-left: none;
+}
